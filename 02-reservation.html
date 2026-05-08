@@ -29,25 +29,7 @@
     --sys-line:   #E8B4BA;
   }
 
-  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 20px 100px; }
-
   /* ── 히어로 배너 ── */
-  .hero {
-    background: var(--navy);
-    color: white;
-    padding: 54px 44px 48px;
-    border-radius: 20px;
-    margin-bottom: 48px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 4px;
-    background: var(--gold);
-  }
   .hero .badge {
     display: inline-block;
     background: rgba(184,137,46,.22);
@@ -59,12 +41,6 @@
     border-radius: 20px;
     margin-bottom: 16px;
     letter-spacing: .3px;
-  }
-  .hero h1 {
-    font-size: 1.9rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    line-height: 1.35;
   }
   .hero .subtitle {
     font-size: 1rem;
@@ -665,6 +641,47 @@
     font-weight: 700;
     color: #1c3254;
     margin: 0 0 6px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1c3254 0%, #14253f 100%);
+    color: white;
+    border-radius: 22px;
+    padding: 56px 44px 50px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(28,50,84,.2);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245,244,241,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,244,241,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #b8892e, #d4aa5a);
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin-bottom: 14px;
   }
 </style>
 <style>
